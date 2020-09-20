@@ -1,0 +1,71 @@
+{
+  "Notification": {
+    "title" : "Notification",
+    "tableTitle": "Notification",
+    "tablePostDate": "Post Date"
+  },
+  "NotificationEdit": {
+    "title": "Notification register/modify",
+    "detailTitle": "Notification detail",
+    "subject": "subject",
+    "body": "body",
+    "register": "Register Notification",
+    "publishScope": "Publish Scope",
+    "subjectNoInputError": "Subject not input",
+    "bodyNoInputError": "Body not input",
+    "sectionsNoInputError": "Publish Scope not checked",
+    "edit": "edit",
+    "delete": "delete"
+  },
+  "Reset": {
+    "title": "Password Reset",
+    "email": "Email",
+    "passwordReset": "Reset Password",
+    "backToLogin": "Back to Login Screen",
+    "emailNoInputError": "Email not input",
+    "emailInvalidError": "Invalid Email format",
+    "SendEmail": "A password reset email has been sent to the address you entered",
+    "notExistEmail": "Email not registered. Please check it again."
+  },
+  "SignIn": {
+    "title": "SignIn",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "SignIn",
+    "forgetPassword": "",
+    "here": "Forget your password?",
+    "emailNoInputError": "Email not input",
+    "emailInvalidError": "Invalid Email format",
+    "passwordNoInputError": "Password not input",
+    "failedSignIn": "Login failed. Please verify your Email or Password."
+  },
+  "UserEdit": {
+    "title": "User register/modify",
+    "email": "Email",
+    "role": "Role",
+    "name": "Name",
+    "section": "Section",
+    "register": "Register User Information",
+    "emailNoInputError": "Email not input",
+    "emailInvalidError": "Invalid Email format",
+    "passwordNoInputError": "Password not input",
+    "userNameNoInputError": "Name not input",
+    "roleIdNoInputError": "Role not selected",
+    "sectionIdNoInputError": "Section not selected",
+    "emailDuplicateError": "{{email}} is already existed"
+  },
+  "UserList" : {
+    "title": "User List",
+    "newRegister": "New Registration",
+    "name": "User Name",
+    "email": "Email",
+    "section": "Section",
+    "role": "Role",
+    "operation": "Operation",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "Common": {
+    "communicationError": "Communication failed. Please check the connection status."
+  }
+}

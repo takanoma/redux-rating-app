@@ -1,0 +1,71 @@
+{
+  "Notification": {
+    "title" : "お知らせ",
+    "tableTitle": "お知らせ",
+    "tablePostDate": "投稿日時"
+  },
+  "NotificationEdit": {
+    "title": "お知らせ登録・編集",
+    "detailTitle": "お知らせ詳細",
+    "subject": "タイトル",
+    "body": "本文",
+    "register": "お知らせを登録",
+    "publishScope": "公開範囲",
+    "subjectNoInputError": "タイトルが入力されていません",
+    "bodyNoInputError": "本文が入力されていません",
+    "sectionsNoInputError": "公開範囲が選択されていません",
+    "edit": "編集",
+    "delete": "削除"
+  },
+  "Reset": {
+    "title": "パスワードリセット",
+    "email": "メールアドレス",
+    "passwordReset": "パスワードをリセットする",
+    "backToLogin": "ログイン画面に戻る",
+    "emailNoInputError": "メールアドレスが入力されていません",
+    "emailInvalidError": "メール形式として妥当ではありません",
+    "SendEmail": "入力したパスワードにパスワードリセット用のメールを送信しました",
+    "notExistEmail": "登録されていないメールアドレスです。もう一度ご確認ください。"
+  },
+  "SignIn": {
+    "title": "サインイン",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "signIn": "サインイン",
+    "forgetPassword": "パスワードを忘れた方は",
+    "here": "こちら",
+    "emailNoInputError": "メールアドレスが入力されていません",
+    "emailInvalidError": "メール形式として妥当ではありません",
+    "passwordNoInputError": "パスワードが入力されていません",
+    "failedSignIn": "ログインに失敗しました。メールアドレスまたはパスワードをお確かめください。"
+  },
+  "UserEdit": {
+    "title": "ユーザー登録・編集",
+    "email": "メールアドレス",
+    "role": "権限",
+    "name": "名前",
+    "section": "部署",
+    "register": "ユーザー情報を登録",
+    "emailNoInputError": "メールアドレスが入力されていません",
+    "emailInvalidError": "メール形式として妥当ではありません",
+    "passwordNoInputError": "パスワードが入力されていません",
+    "userNameNoInputError": "名前が入力されていません",
+    "roleNoInputError": "権限が選択されていません",
+    "sectionNoInputError": "部署が選択されていません",
+    "emailDuplicateError": "{{email}}はすでに登録されています"
+  },
+  "UserList" : {
+    "title": "ユーザー一覧",
+    "newRegister": "新規登録",
+    "name": "ユーザー名",
+    "email": "メールアドレス",
+    "section": "部署",
+    "role": "権限",
+    "operation": "操作",
+    "edit": "編集",
+    "delete": "削除"
+  },
+  "Common": {
+    "communicationError": "通信に失敗しました。接続状態をお確かめください"
+  }
+}
