@@ -45,7 +45,7 @@
     "role": "Role",
     "name": "Name",
     "section": "Section",
-    "register": "Register User Information",
+    "register": "Register User",
     "emailNoInputError": "Email not input",
     "emailInvalidError": "Invalid Email format",
     "passwordNoInputError": "Password not input",
@@ -64,6 +64,11 @@
     "operation": "Operation",
     "edit": "Edit",
     "delete": "Delete"
+  },
+  "ClosableDrawer": {
+    "notifications": "Notifications",
+    "users": "Users",
+    "logout": "Log out"
   },
   "Common": {
     "communicationError": "Communication failed. Please check the connection status."

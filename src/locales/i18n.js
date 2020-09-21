@@ -5,8 +5,9 @@ import resources from './resources';
 
 i18n.use(initReactI18next).init({
     resources,
-    fallbackLng: 'en',
-    debug: true,
+    lng: 'ja',
+    fallbackLng: false,
+    debug: false,
 
     interpolation: {
         escapeValue: false

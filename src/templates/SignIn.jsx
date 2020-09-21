@@ -90,7 +90,7 @@ const SignIn = () => {
                     onClick={() => onSubmit()}
                     />
                     <div className="module-spacer--small" />
-                    <p className="c-section__login-text-link">{t('SignIn.forgetPassword')}<a href="/#" onClick={() => dispatch(push('/signin/reset'))}>{t('SignIn.here')}</a></p>
+                    <p className="c-section__login-text-link">{t('SignIn.forgetPassword')}<span onClick={() => dispatch(push('/signin/reset'))}>{t('SignIn.here')}</span></p>
                 </div>
             </div>
         </div>

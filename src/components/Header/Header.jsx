@@ -7,6 +7,8 @@ import logo                           from "../../assets/img/icons/mylogo.png";
 import {HeaderMenu, ClosableDrawer}   from "./index";
 import {push}                         from "connected-react-router"
 import {getIsSignedIn} from "../../reducks/user/selectors";
+import {HeaderSelectBox} from "../UIkit";
+import {useTranslation} from "react-i18next";
 
 const useStyles = makeStyles({
     root: {
@@ -22,11 +24,19 @@ const useStyles = makeStyles({
         width: '100%'
     },
     iconButtons: {
-        margin: '0 0 0 auto'
+        float: 'right'
     },
     logo: {
         cursor: 'pointer'
-    }
+    },
+    list: {
+        float: 'left',
+        paddingRight: 30,
+        marginTop: 5
+    },
+    header: {
+        margin: '0 0 0 auto'
+    },
 });
 
 const Header = () => {
@@ -34,9 +44,13 @@ const Header = () => {
     const dispatch = useDispatch();
     const selector = useSelector(state => state);
     const isSignedIn = getIsSignedIn(selector);
-    const userName = selector.user.userName
+    const userName = selector.user.userName;
 
-    const [sideBarOpen, setSideBarOpen] = useState(false);
+    const [sideBarOpen, setSideBarOpen] = useState(false),
+          [language, setLanguage] = useState("ja");
+    const [t, i18n] = useTranslation();
+
+    const languages = [{"id": "ja", "name": "日本語"}, {"id": "en", "name": "ENGLISH"}];
 
     const handleDrawerToggle = useCallback((event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -44,6 +58,11 @@ const Header = () => {
         }
         setSideBarOpen(!sideBarOpen)
     }, [setSideBarOpen, sideBarOpen ]);
+
+    const inputLanguage = useCallback((event) => {
+        setLanguage(event);
+        i18n.changeLanguage(event);
+    }, [setLanguage, i18n]);
 
     return (
         <div className={classes.root}>
@@ -53,12 +72,20 @@ const Header = () => {
                         alt="Logo" src={logo} width="180px"
                         onClick={() => dispatch(push('/'))} role="button"
                     />
-                    {isSignedIn && (
-                        <div className={classes.iconButtons}>
-                            <span>{userName} 様</span>
-                            <HeaderMenu handleDrawerToggle={handleDrawerToggle} />
+
+                    <div className={classes.header}>
+                        <div className={classes.list}>
+                            <HeaderSelectBox
+                                options={languages} select={inputLanguage} value={language}
+                            />
                         </div>
-                    )}
+                        {isSignedIn && (
+                            <div className={classes.iconButtons}>
+                                <span>{userName} 様</span>
+                                <HeaderMenu handleDrawerToggle={handleDrawerToggle} />
+                            </div>
+                        )}
+                    </div>
                 </Toolbar>
             </AppBar>
 

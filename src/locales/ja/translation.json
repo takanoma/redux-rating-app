@@ -65,6 +65,11 @@
     "edit": "編集",
     "delete": "削除"
   },
+  "ClosableDrawer": {
+    "notifications": "お知らせ",
+    "users": "ユーザー一覧",
+    "logout": "ログアウト"
+  },
   "Common": {
     "communicationError": "通信に失敗しました。接続状態をお確かめください"
   }

@@ -4,3 +4,4 @@ export {default as SecondaryButton} from './SecondaryButton';
 export {default as SelectBox} from './SelectBox';
 export {default as CheckboxLabel} from './CheckboxLabel';
 export {default as CheckboxesGroup} from './CheckboxesGroup';
+export {default as HeaderSelectBox} from './HeaderSelectBox';

@@ -42,10 +42,10 @@ const UserList = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
     const selector = useSelector(state => state);
-    const users = getUsers(selector);
     const roleId = selector.user.roleId;
     const sectionId = selector.user.sectionId;
     const userId = getUserId(selector);
+    const users = getUsers(selector);
 
     useEffect(() => {
         // roleIdに応じた値をstateに保存する

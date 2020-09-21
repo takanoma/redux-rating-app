@@ -13,21 +13,15 @@ import PeopleIcon from '@material-ui/icons/People';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import {getRoleId} from "../../reducks/user/selectors";
 import {ROLE_USER} from "../../const/code";
+import {useTranslation} from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
         drawer: {
             position: "relative",
             top: 100
         },
-        // necessary for content to be below app bar
-        toolbar: theme.mixins.toolbar,
         drawerPaper: {
-            width: 256,
-        },
-        searchField: {
-            alignItems: 'center',
-            display: 'flex',
-            marginLeft: 32
+            width: 250
         }
 }));
 
@@ -43,10 +37,11 @@ const ClosableDrawer = (props) => {
         props.onClose(event, false);
     };
 
+    const [t, i18n] = useTranslation();
     const menus = []
-    menus.push({func: selectMenu, label: "お知らせ",    icon: <NotificationsActiveIcon/>, id: "register", value: "/"});
+    menus.push({func: selectMenu, label: t('ClosableDrawer.notifications'),    icon: <NotificationsActiveIcon/>, id: "register", value: "/"});
     if (roleId !== ROLE_USER) {
-        menus.push({func: selectMenu, label: "ユーザー一覧",    icon: <PeopleIcon/>,   id: "users",  value: "/users"});
+        menus.push({func: selectMenu, label: t('ClosableDrawer.users'),    icon: <PeopleIcon/>,   id: "users",  value: "/users"});
     }
 
     return (
@@ -64,7 +59,6 @@ const ClosableDrawer = (props) => {
                     keepMounted: true,
                 }}
             >
-                {/*Drawerを開いている際に、enter押下で閉じる*/}
                 <div
 
                     onClose={(e) => props.onClose(e)}
@@ -86,7 +80,7 @@ const ClosableDrawer = (props) => {
                             <ListItemIcon>
                                 <ExitToAppIcon/>
                             </ListItemIcon>
-                            <ListItemText primary={"Logout"}/>
+                            <ListItemText primary={t('ClosableDrawer.logout')}/>
                         </ListItem>
                     </List>
                 </div>

@@ -69,7 +69,7 @@ const Reset = () => {
                     />
                     <div className="module-spacer--small" />
                     <p className="u-text-small c-section__login-text-link">
-                        <a href="/#" onClick={() => onBackToLogin()}>{t('Reset.backToLogin')}</a></p>
+                        <span onClick={() => onBackToLogin()}>{t('Reset.backToLogin')}</span></p>
                 </div>
             </div>
 

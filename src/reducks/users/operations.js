@@ -31,8 +31,6 @@ export const saveUser = (userId, userName, mailAddress, roleId, sectionId) => {
                             args: []
                         }));
                     } else {
-                        console.info("success");
-
                         let password = generateRandomChar(8);
                         createAuthUser(mailAddress, password)
                             .then(user => {
@@ -101,6 +99,7 @@ export const deleteUser = (uid) => {
         if (!window.confirm("削除してもよろしいですか？")) {
             return false;
         }
+        dispatch(showLoadingAction());
         deleteAuthUser(uid)
             .then(result => {
                 if (result) {
@@ -109,11 +108,16 @@ export const deleteUser = (uid) => {
                             const prevUsers = getState().users.list;
                             // 削除される以外のproductをnextProductsに設定
                             const newUsers = prevUsers.filter(user => user.userId !== uid)
+                            dispatch(hideLoadingAction());
                             dispatch(deleteUserAction(newUsers));
                         })
                 }
         }).catch(e => {
-            alert("ユーザー削除に失敗しました。通信状況をお確かめください。");
+            dispatch(errorAction({
+                errorType: COMMUNICATION_ERROR,
+                args: []
+            }));
+            dispatch(hideLoadingAction());
         })
     }
 

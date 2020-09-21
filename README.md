@@ -59,7 +59,8 @@ curl -X POST -H "Content-Type:application/json" https://us-central1-redux-rating
 
 |  名前  |  メールアドレス  | パスワード | 所属部署 |
 | ---- | ---- | ---- | ---- |
-|  管理者  |  testorangeapp123@gmail.com  |  dSJt2pfs  |  人事部  |
+|  管理者  |  testorangeapp123@gmail.com  |  秘密で  |  人事部  |
+|  アプリ管理者  |  testorangeapp123+appadmin@gmail.com  |  2wiFtYMN  |  人事部  |
 |  開発部長  |  testorangeapp123+developmanager@gmail.com  |  V79EWucQ  |  開発部  |
 |  開発社員1  |  testorangeapp123+develop1@gmail.com  |  BMZlaBkQ  |  開発部  |
-|  開発社員2  |  testorangeapp123+develop2@gmail.com  |  gWTEeeF5  |  開発部  |
+|  開発社員2  |  testorangeapp123+develop2@gmail.com  |  YEQSplY8  |  開発部  |
